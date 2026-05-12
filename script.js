@@ -1,4 +1,11 @@
-const sound = new Audio("./noise_pollution/ausis.mp3");
+const sounds = [
+    new Audio("./sounds/a.mp3"),
+    new Audio("./sounds/b.mp3"),
+    new Audio("./sounds/c.mp3"),
+    new Audio("./sounds/d.mp3"),
+    new Audio("./sounds/e.mp3"),
+    new Audio("./sounds/f.mp3"),
+];
 
 const button = document.getElementById("mainButton");
 
