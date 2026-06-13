@@ -1,7 +1,7 @@
 const soundUpgrades = [
-    { id: 1, name: "1.9 TDI Engine", path: "./noise_pollution/1,9tdi.mp3", cost: 15 },
-    { id: 2, name: "Morning Neighbors", path: "./noise_pollution/kaimini_no_rita.mp3", cost: 120 },
-    { id: 3, name: "Microwave Beeping", path: "./noise_pollution/microwave.mp3", cost: 180 },
+    { id: 1, name: "1.9TDI", path: "./noise_pollution/1,9tdi.mp3", cost: 15 },
+    { id: 2, name: "Kaimiņi", path: "./noise_pollution/kaimini_no_rita.mp3", cost: 120 },
+    { id: 3, name: "Mikroviļņi", path: "./noise_pollution/microwave.mp3", cost: 180 },
 ];
 
 const warningSound = [
@@ -138,7 +138,7 @@ function checkVictoryState() {
 
     if (remainingNoises.length === 0) {
 
-        mainButton.innerText = "Absolute Peace.";
+        mainButton.innerText = "idk how, but you won.";
         mainButton.disabled = true;
         mainButton.style.backgroundColor = "#6c757d";
         mainButton.style.boxShadow = "none";
@@ -291,7 +291,7 @@ mainButton.addEventListener("click", function() {
             return;
         }
 
-        currency = currency + 1;
+        currency += 1;
 
         updateGameEngine();
     }
