@@ -8,9 +8,32 @@
 </head>
 <body>
     
-    <button id="mainButton" class="big-blue-button">
-        Click Me
-    </button>
+    <div class="game-container">
+        <aside id="sidebar" class="sidebar hidden">
+            <h2>Mute Shop</h2>
+            <hr>
+            <div id="upgradeList">
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <h1 id="scoreDisplay">Money: $0</h1>
+            <button id="mainButton" class="big-blue-button">
+                Click Me
+            </button>
+            <div id="mathPopup" class="hidden">
+                <div class="math-box">
+                    <h2>Math Check!</h2>
+                    <p id="mathQuestion"></p>
+                    <p id="mathTimer">3</p>
+                    <input type="number" id="mathAnswer">
+                    <button id="submitMath">Submit</button>
+                </div>
+            </div>
+                    
+        </main>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
