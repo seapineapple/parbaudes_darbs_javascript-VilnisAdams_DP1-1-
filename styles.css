@@ -1,15 +1,52 @@
 body {
     margin: 0;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: system-ui, -apple-system, sans-serif;
     background-color: #f8f9fa;
 }
 
+.game-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 320px;
+    background-color: #ffffff;
+    border-right: 2px solid #e9ecef;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #dee2e6;
+    width: 100%;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .big-blue-button {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%; 
     background-color: #007bff;
     color: white;
@@ -18,14 +55,80 @@ body {
     border: none;
     cursor: pointer;
     box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transition: all 0.2s ease;
 }
 
 .big-blue-button:hover {
     background-color: #0056b3;
-    transform: scale(1.1);
-    box-shadow: 0 12px 20px rgba(0, 123, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.upgrade-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #f1f3f5;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.sound-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #495057;
+}
+
+.mute-btn {
+    padding: 8px 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.mute-btn.disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.mute-btn.bought {
+    background-color: #28a745;
+    cursor: default;
+}
+
+#mathPopup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+#mathPopup.hidden {
+    display: none;
+}
+
+.math-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.math-box input {
+    margin: 10px;
+    padding: 8px;
 }
