@@ -1,7 +1,7 @@
 const soundUpgrades = [
     { id: 1, name: "1.9TDI", path: "./noise_pollution/1,9tdi.mp3", cost: 15 },
-    { id: 2, name: "Kaimiņi", path: "./noise_pollution/kaimini_no_rita.mp3", cost: 120 },
-    { id: 3, name: "Mikroviļņi", path: "./noise_pollution/microwave.mp3", cost: 180 },
+    { id: 2, name: "Kaimiņi", path: "./noise_pollution/kaimini_no_rita.mp3", cost: 60 },
+    { id: 3, name: "Mikroviļņi", path: "./noise_pollution/microwave.mp3", cost: 140 },
 ];
 
 const warningSound = [
